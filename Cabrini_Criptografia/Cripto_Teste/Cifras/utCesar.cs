@@ -5,7 +5,7 @@ using Criptografia.Crifras;
 namespace Cripto_Teste.Cifras
 {
     [TestClass]
-    public class utCesar
+    public class utCesar : ITesteCriptografica
     {
         [TestMethod]
         public void Criptografia()
