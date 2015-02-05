@@ -26,7 +26,7 @@ namespace Criptografia.Crifras
             {
                 int valorConversao = (int)texto[i] + chave;
                 valorConversao = valorConversao % 256;
-                retorno.Append(valorConversao);
+                retorno.Append((char)valorConversao);
             }
 
             return retorno.ToString();
