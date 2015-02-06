@@ -20,3 +20,14 @@ C:\Users\032126431\Downloads\Cabrini-master\Cabrini_Criptografia\Cabrini_Criptog
 C:\Users\032126431\Downloads\Cabrini-master\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.frCriptografia.resources
 C:\Users\032126431\Downloads\Cabrini-master\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.Properties.Resources.resources
 C:\Users\032126431\Downloads\Cabrini-master\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.csproj.GenerateResource.Cache
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\bin\Debug\Cabrini_Criptografia.exe.config
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.exe
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.pdb
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\bin\Debug\Cabrini_Criptografia.exe
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\bin\Debug\Cabrini_Criptografia.pdb
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\bin\Debug\Criptografia.dll
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\bin\Debug\Criptografia.pdb
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.csprojResolveAssemblyReference.cache
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.frCriptografia.resources
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.Properties.Resources.resources
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.csproj.GenerateResource.Cache

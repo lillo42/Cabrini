@@ -36,7 +36,7 @@ namespace Cabrini_Criptografia
         {
             if (cboTipoCripto.SelectedIndex == 0)
                 CriptoCesar();
-            txtCripto.Clear();
+            txtDeCripto.Clear();
             
         }
 
@@ -55,7 +55,7 @@ namespace Cabrini_Criptografia
         {
             if(!string.IsNullOrEmpty(txtCaminho.Text))
             {
-                txtDeCripto.Text = File.ReadAllText(openFileDialog1.FileName);
+                txtCripto.Text = File.ReadAllText(openFileDialog1.FileName);
             }
         }
 
