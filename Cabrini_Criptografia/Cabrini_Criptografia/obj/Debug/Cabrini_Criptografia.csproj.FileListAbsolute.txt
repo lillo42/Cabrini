@@ -1,0 +1,11 @@
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\bin\Debug\Cabrini_Criptografia.exe.config
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\bin\Debug\Cabrini_Criptografia.exe
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\bin\Debug\Cabrini_Criptografia.pdb
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\bin\Debug\Criptografia.dll
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\bin\Debug\Criptografia.pdb
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.csprojResolveAssemblyReference.cache
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.Form1.resources
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.Properties.Resources.resources
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.csproj.GenerateResource.Cache
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.exe
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Cabrini_Criptografia\obj\Debug\Cabrini_Criptografia.pdb

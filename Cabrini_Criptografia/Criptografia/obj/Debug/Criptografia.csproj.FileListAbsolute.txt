@@ -1,0 +1,5 @@
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Criptografia\bin\Debug\Criptografia.dll
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Criptografia\bin\Debug\Criptografia.pdb
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Criptografia\obj\Debug\Criptografia.csprojResolveAssemblyReference.cache
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Criptografia\obj\Debug\Criptografia.dll
+C:\Users\Flavinha\Documents\GitHub\Cabrini\Cabrini_Criptografia\Criptografia\obj\Debug\Criptografia.pdb

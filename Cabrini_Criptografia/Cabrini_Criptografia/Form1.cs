@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Cabrini_Criptografia
 {
-    public partial class Form1 : Form
+    public partial class frCriptografia : Form
     {
-        public Form1()
+        public frCriptografia()
         {
             InitializeComponent();
         }
+
     }
 }
