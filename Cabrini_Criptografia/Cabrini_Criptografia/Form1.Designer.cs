@@ -151,6 +151,11 @@
             this.nuChave.Name = "nuChave";
             this.nuChave.Size = new System.Drawing.Size(75, 20);
             this.nuChave.TabIndex = 10;
+            this.nuChave.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             // 
             // label1
             // 
