@@ -28,26 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCripto = new System.Windows.Forms.TextBox();
             this.lblMsgCripto = new System.Windows.Forms.Label();
             this.btnCriptografar = new System.Windows.Forms.Button();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.cboTipoCripto = new System.Windows.Forms.ComboBox();
             this.btnDecriptografar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnAbrir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDescripto = new System.Windows.Forms.TextBox();
+            this.txtCaminho = new System.Windows.Forms.TextBox();
+            this.nuChave = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnCaminho = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.nuChave)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtCripto
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 47);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 70);
-            this.textBox1.TabIndex = 0;
+            this.txtCripto.Location = new System.Drawing.Point(28, 47);
+            this.txtCripto.Multiline = true;
+            this.txtCripto.Name = "txtCripto";
+            this.txtCripto.Size = new System.Drawing.Size(257, 70);
+            this.txtCripto.TabIndex = 0;
             // 
             // lblMsgCripto
             // 
@@ -60,12 +66,13 @@
             // 
             // btnCriptografar
             // 
-            this.btnCriptografar.Location = new System.Drawing.Point(356, 99);
+            this.btnCriptografar.Location = new System.Drawing.Point(356, 79);
             this.btnCriptografar.Name = "btnCriptografar";
             this.btnCriptografar.Size = new System.Drawing.Size(91, 38);
             this.btnCriptografar.TabIndex = 2;
             this.btnCriptografar.Text = "Criptografar";
             this.btnCriptografar.UseVisualStyleBackColor = true;
+            this.btnCriptografar.Click += new System.EventHandler(this.btnCriptografar_Click);
             // 
             // openFileDialog1
             // 
@@ -73,38 +80,44 @@
             // 
             // cboTipoCripto
             // 
+            this.cboTipoCripto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoCripto.FormattingEnabled = true;
+            this.cboTipoCripto.Items.AddRange(new object[] {
+            "cesar"});
             this.cboTipoCripto.Location = new System.Drawing.Point(356, 47);
             this.cboTipoCripto.Name = "cboTipoCripto";
-            this.cboTipoCripto.Size = new System.Drawing.Size(201, 21);
+            this.cboTipoCripto.Size = new System.Drawing.Size(120, 21);
             this.cboTipoCripto.TabIndex = 3;
             // 
             // btnDecriptografar
             // 
-            this.btnDecriptografar.Location = new System.Drawing.Point(466, 99);
+            this.btnDecriptografar.Location = new System.Drawing.Point(466, 79);
             this.btnDecriptografar.Name = "btnDecriptografar";
             this.btnDecriptografar.Size = new System.Drawing.Size(91, 38);
             this.btnDecriptografar.TabIndex = 4;
             this.btnDecriptografar.Text = "Decriptografar";
             this.btnDecriptografar.UseVisualStyleBackColor = true;
+            this.btnDecriptografar.Click += new System.EventHandler(this.btnDecriptografar_Click);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(356, 171);
+            this.btnSalvar.Location = new System.Drawing.Point(356, 187);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 38);
             this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnAbrir
             // 
-            this.btnAbrir.Location = new System.Drawing.Point(466, 171);
+            this.btnAbrir.Location = new System.Drawing.Point(466, 187);
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(91, 38);
             this.btnAbrir.TabIndex = 6;
             this.btnAbrir.Text = "Abrir";
             this.btnAbrir.UseVisualStyleBackColor = true;
+            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
             // label2
             // 
@@ -115,31 +128,90 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Texto Decriptografado";
             // 
-            // textBox2
+            // txtDescripto
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(28, 157);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(257, 70);
-            this.textBox2.TabIndex = 7;
+            this.txtDescripto.Enabled = false;
+            this.txtDescripto.Location = new System.Drawing.Point(28, 157);
+            this.txtDescripto.Multiline = true;
+            this.txtDescripto.Name = "txtDescripto";
+            this.txtDescripto.Size = new System.Drawing.Size(257, 70);
+            this.txtDescripto.TabIndex = 7;
+            // 
+            // txtCaminho
+            // 
+            this.txtCaminho.Enabled = false;
+            this.txtCaminho.Location = new System.Drawing.Point(356, 159);
+            this.txtCaminho.Name = "txtCaminho";
+            this.txtCaminho.Size = new System.Drawing.Size(169, 20);
+            this.txtCaminho.TabIndex = 9;
+            // 
+            // nuChave
+            // 
+            this.nuChave.Location = new System.Drawing.Point(482, 48);
+            this.nuChave.Name = "nuChave";
+            this.nuChave.Size = new System.Drawing.Size(75, 20);
+            this.nuChave.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(353, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Tipo de Cripto";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(479, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Chave";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(353, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Arquivo";
+            // 
+            // btnCaminho
+            // 
+            this.btnCaminho.Location = new System.Drawing.Point(531, 159);
+            this.btnCaminho.Name = "btnCaminho";
+            this.btnCaminho.Size = new System.Drawing.Size(26, 20);
+            this.btnCaminho.TabIndex = 14;
+            this.btnCaminho.Text = "...";
+            this.btnCaminho.UseVisualStyleBackColor = true;
+            this.btnCaminho.Click += new System.EventHandler(this.btnCaminho_Click);
             // 
             // frCriptografia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 250);
+            this.Controls.Add(this.btnCaminho);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.nuChave);
+            this.Controls.Add(this.txtCaminho);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDescripto);
             this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnDecriptografar);
             this.Controls.Add(this.cboTipoCripto);
             this.Controls.Add(this.btnCriptografar);
             this.Controls.Add(this.lblMsgCripto);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCripto);
             this.Name = "frCriptografia";
             this.Text = "Criptografia";
+            ((System.ComponentModel.ISupportInitialize)(this.nuChave)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,17 +219,22 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCripto;
         private System.Windows.Forms.Label lblMsgCripto;
         private System.Windows.Forms.Button btnCriptografar;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox cboTipoCripto;
         private System.Windows.Forms.Button btnDecriptografar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnAbrir;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDescripto;
+        private System.Windows.Forms.TextBox txtCaminho;
+        private System.Windows.Forms.NumericUpDown nuChave;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCaminho;
     }
 }
 
