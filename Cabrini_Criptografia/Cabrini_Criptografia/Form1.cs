@@ -23,13 +23,13 @@ namespace Cabrini_Criptografia
         private void CriptoCesar()
         {
             var cesar = new Cesar();
-            txtDescripto.Text = cesar.Criptografa(txtCripto.Text, (int)nuChave.Value);
+            txtCripto.Text = cesar.Criptografa(txtDeCripto.Text, (int)nuChave.Value);
         }
 
         private void DesCriptoCesar()
         {
             var cesar = new Cesar();
-            txtCripto.Text = cesar.Decriptografa(txtDescripto.Text, (int)nuChave.Value);
+            txtDeCripto.Text = cesar.Decriptografa(txtCripto.Text, (int)nuChave.Value);
         }
 
         private void btnCriptografar_Click(object sender, EventArgs e)
@@ -48,12 +48,15 @@ namespace Cabrini_Criptografia
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(openFileDialog1.FileName, txtDescripto.Text);
+            File.WriteAllText(openFileDialog1.FileName, txtCripto.Text);
         }
 
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-
+            if(!string.IsNullOrEmpty(txtCaminho.Text))
+            {
+                txtDeCripto.Text = File.ReadAllText(openFileDialog1.FileName);
+            }
         }
 
         private void btnCaminho_Click(object sender, EventArgs e)

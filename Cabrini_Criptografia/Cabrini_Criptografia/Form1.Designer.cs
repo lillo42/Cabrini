@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCripto = new System.Windows.Forms.TextBox();
+            this.txtDeCripto = new System.Windows.Forms.TextBox();
             this.lblMsgCripto = new System.Windows.Forms.Label();
             this.btnCriptografar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -37,7 +37,7 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnAbrir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtDescripto = new System.Windows.Forms.TextBox();
+            this.txtCripto = new System.Windows.Forms.TextBox();
             this.txtCaminho = new System.Windows.Forms.TextBox();
             this.nuChave = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,22 +47,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.nuChave)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtCripto
+            // txtDeCripto
             // 
-            this.txtCripto.Location = new System.Drawing.Point(28, 47);
-            this.txtCripto.Multiline = true;
-            this.txtCripto.Name = "txtCripto";
-            this.txtCripto.Size = new System.Drawing.Size(257, 70);
-            this.txtCripto.TabIndex = 0;
+            this.txtDeCripto.Location = new System.Drawing.Point(28, 47);
+            this.txtDeCripto.Multiline = true;
+            this.txtDeCripto.Name = "txtDeCripto";
+            this.txtDeCripto.Size = new System.Drawing.Size(257, 70);
+            this.txtDeCripto.TabIndex = 0;
             // 
             // lblMsgCripto
             // 
             this.lblMsgCripto.AutoSize = true;
             this.lblMsgCripto.Location = new System.Drawing.Point(25, 31);
             this.lblMsgCripto.Name = "lblMsgCripto";
-            this.lblMsgCripto.Size = new System.Drawing.Size(100, 13);
+            this.lblMsgCripto.Size = new System.Drawing.Size(113, 13);
             this.lblMsgCripto.TabIndex = 1;
-            this.lblMsgCripto.Text = "Texto a Criptografar";
+            this.lblMsgCripto.Text = "Texto a Decriptografar";
             // 
             // btnCriptografar
             // 
@@ -124,18 +124,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 141);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 13);
+            this.label2.Size = new System.Drawing.Size(100, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Texto Decriptografado";
+            this.label2.Text = "Texto a Criptografar";
             // 
-            // txtDescripto
+            // txtCripto
             // 
-            this.txtDescripto.Enabled = false;
-            this.txtDescripto.Location = new System.Drawing.Point(28, 157);
-            this.txtDescripto.Multiline = true;
-            this.txtDescripto.Name = "txtDescripto";
-            this.txtDescripto.Size = new System.Drawing.Size(257, 70);
-            this.txtDescripto.TabIndex = 7;
+            this.txtCripto.Enabled = false;
+            this.txtCripto.Location = new System.Drawing.Point(28, 157);
+            this.txtCripto.Multiline = true;
+            this.txtCripto.Name = "txtCripto";
+            this.txtCripto.Size = new System.Drawing.Size(257, 70);
+            this.txtCripto.TabIndex = 7;
             // 
             // txtCaminho
             // 
@@ -201,14 +201,14 @@
             this.Controls.Add(this.nuChave);
             this.Controls.Add(this.txtCaminho);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtDescripto);
+            this.Controls.Add(this.txtCripto);
             this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnDecriptografar);
             this.Controls.Add(this.cboTipoCripto);
             this.Controls.Add(this.btnCriptografar);
             this.Controls.Add(this.lblMsgCripto);
-            this.Controls.Add(this.txtCripto);
+            this.Controls.Add(this.txtDeCripto);
             this.Name = "frCriptografia";
             this.Text = "Criptografia";
             ((System.ComponentModel.ISupportInitialize)(this.nuChave)).EndInit();
@@ -219,7 +219,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtCripto;
+        private System.Windows.Forms.TextBox txtDeCripto;
         private System.Windows.Forms.Label lblMsgCripto;
         private System.Windows.Forms.Button btnCriptografar;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
@@ -228,7 +228,7 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnAbrir;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtDescripto;
+        private System.Windows.Forms.TextBox txtCripto;
         private System.Windows.Forms.TextBox txtCaminho;
         private System.Windows.Forms.NumericUpDown nuChave;
         private System.Windows.Forms.Label label1;
