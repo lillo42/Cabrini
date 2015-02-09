@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="Crifras\Cesar.cs" />
     <Compile Include="Crifras\Vigenere.cs" />
+    <Compile Include="Interfaces\IMonoAlfabetica.cs" />
+    <Compile Include="Interfaces\IPoliAlfabetica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

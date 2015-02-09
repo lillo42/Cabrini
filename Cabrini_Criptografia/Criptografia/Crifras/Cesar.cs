@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Criptografia.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Criptografia.Crifras
 {
-    public class Cesar
+    public class Cesar : IMonoAlfabetica
     {
         public string Criptografa(string texto, int chave = 3)
         {
