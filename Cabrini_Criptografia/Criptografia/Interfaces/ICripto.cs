@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Criptografia.Interfaces
 {
-    public interface IPoliAlfabetica : ICripto
+    public interface ICripto
     {
-        string Criptografa(string texto, string chave);
-
-        string Decriptografa(string texto, string chave);
+        string Nome { get; }
     }
 }

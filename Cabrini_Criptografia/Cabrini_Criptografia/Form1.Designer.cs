@@ -40,12 +40,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCripto = new System.Windows.Forms.TextBox();
             this.txtCaminho = new System.Windows.Forms.TextBox();
-            this.nuChave = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCaminho = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.nuChave)).BeginInit();
+            this.txtChave = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbAlgoritmos = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtDeCripto
@@ -77,7 +78,7 @@
             this.btnCriptografar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCriptografar.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCriptografar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCriptografar.Location = new System.Drawing.Point(330, 79);
+            this.btnCriptografar.Location = new System.Drawing.Point(395, 99);
             this.btnCriptografar.Name = "btnCriptografar";
             this.btnCriptografar.Size = new System.Drawing.Size(113, 38);
             this.btnCriptografar.TabIndex = 2;
@@ -94,12 +95,11 @@
             this.cboTipoCripto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoCripto.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoCripto.FormattingEnabled = true;
-            this.cboTipoCripto.Items.AddRange(new object[] {
-            "cesar"});
-            this.cboTipoCripto.Location = new System.Drawing.Point(330, 47);
+            this.cboTipoCripto.Location = new System.Drawing.Point(395, 27);
             this.cboTipoCripto.Name = "cboTipoCripto";
             this.cboTipoCripto.Size = new System.Drawing.Size(113, 23);
             this.cboTipoCripto.TabIndex = 3;
+            this.cboTipoCripto.SelectedIndexChanged += new System.EventHandler(this.cboTipoCripto_SelectedIndexChanged);
             // 
             // btnDecriptografar
             // 
@@ -110,7 +110,7 @@
             this.btnDecriptografar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDecriptografar.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecriptografar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDecriptografar.Location = new System.Drawing.Point(448, 79);
+            this.btnDecriptografar.Location = new System.Drawing.Point(513, 99);
             this.btnDecriptografar.Name = "btnDecriptografar";
             this.btnDecriptografar.Size = new System.Drawing.Size(113, 38);
             this.btnDecriptografar.TabIndex = 4;
@@ -127,7 +127,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalvar.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSalvar.Location = new System.Drawing.Point(330, 187);
+            this.btnSalvar.Location = new System.Drawing.Point(395, 193);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(113, 38);
             this.btnSalvar.TabIndex = 5;
@@ -144,7 +144,7 @@
             this.btnAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAbrir.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAbrir.Location = new System.Drawing.Point(448, 187);
+            this.btnAbrir.Location = new System.Drawing.Point(513, 193);
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(113, 38);
             this.btnAbrir.TabIndex = 6;
@@ -177,30 +177,17 @@
             // 
             this.txtCaminho.Enabled = false;
             this.txtCaminho.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCaminho.Location = new System.Drawing.Point(330, 159);
+            this.txtCaminho.Location = new System.Drawing.Point(395, 165);
             this.txtCaminho.Name = "txtCaminho";
             this.txtCaminho.Size = new System.Drawing.Size(201, 21);
             this.txtCaminho.TabIndex = 9;
-            // 
-            // nuChave
-            // 
-            this.nuChave.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuChave.Location = new System.Drawing.Point(449, 48);
-            this.nuChave.Name = "nuChave";
-            this.nuChave.Size = new System.Drawing.Size(112, 21);
-            this.nuChave.TabIndex = 10;
-            this.nuChave.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(327, 31);
+            this.label1.Location = new System.Drawing.Point(392, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 15);
             this.label1.TabIndex = 11;
@@ -211,7 +198,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(446, 31);
+            this.label3.Location = new System.Drawing.Point(392, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 12;
@@ -222,7 +209,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(327, 143);
+            this.label4.Location = new System.Drawing.Point(392, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 15);
             this.label4.TabIndex = 13;
@@ -231,13 +218,43 @@
             // btnCaminho
             // 
             this.btnCaminho.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCaminho.Location = new System.Drawing.Point(535, 159);
+            this.btnCaminho.Location = new System.Drawing.Point(600, 165);
             this.btnCaminho.Name = "btnCaminho";
             this.btnCaminho.Size = new System.Drawing.Size(26, 20);
             this.btnCaminho.TabIndex = 14;
             this.btnCaminho.Text = "...";
             this.btnCaminho.UseVisualStyleBackColor = true;
             this.btnCaminho.Click += new System.EventHandler(this.btnCaminho_Click);
+            // 
+            // txtChave
+            // 
+            this.txtChave.Location = new System.Drawing.Point(395, 69);
+            this.txtChave.Name = "txtChave";
+            this.txtChave.Size = new System.Drawing.Size(231, 20);
+            this.txtChave.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(510, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(126, 15);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Tipo de Algoritmo";
+            // 
+            // cbAlgoritmos
+            // 
+            this.cbAlgoritmos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAlgoritmos.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAlgoritmos.FormattingEnabled = true;
+            this.cbAlgoritmos.Items.AddRange(new object[] {
+            "cesar"});
+            this.cbAlgoritmos.Location = new System.Drawing.Point(513, 27);
+            this.cbAlgoritmos.Name = "cbAlgoritmos";
+            this.cbAlgoritmos.Size = new System.Drawing.Size(113, 23);
+            this.cbAlgoritmos.TabIndex = 16;
             // 
             // frCriptografia
             // 
@@ -246,12 +263,14 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(587, 250);
+            this.ClientSize = new System.Drawing.Size(727, 272);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbAlgoritmos);
+            this.Controls.Add(this.txtChave);
             this.Controls.Add(this.btnCaminho);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.nuChave);
             this.Controls.Add(this.txtCaminho);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCripto);
@@ -267,7 +286,6 @@
             this.Name = "frCriptografia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Criptografia";
-            ((System.ComponentModel.ISupportInitialize)(this.nuChave)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,11 +304,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCripto;
         private System.Windows.Forms.TextBox txtCaminho;
-        private System.Windows.Forms.NumericUpDown nuChave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCaminho;
+        private System.Windows.Forms.TextBox txtChave;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbAlgoritmos;
     }
 }
 

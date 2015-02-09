@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Criptografia.Interfaces
 {
-    public interface IMonoAlfabetica
+    public interface IMonoAlfabetica : ICripto
     {
         string Criptografa(string texto, int chave = 3);
 

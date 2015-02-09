@@ -34,5 +34,10 @@ namespace Criptografia.Crifras
 
             return retorno.ToString();
         }
+
+        public string Nome
+        {
+            get { return "Vigenere"; }
+        }
     }
 }

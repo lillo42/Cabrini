@@ -8,3 +8,8 @@ C:\Users\032126431\Downloads\Cabrini-master\Cabrini_Criptografia\Criptografia\bi
 C:\Users\032126431\Downloads\Cabrini-master\Cabrini_Criptografia\Criptografia\obj\Debug\Criptografia.csprojResolveAssemblyReference.cache
 C:\Users\032126431\Downloads\Cabrini-master\Cabrini_Criptografia\Criptografia\obj\Debug\Criptografia.dll
 C:\Users\032126431\Downloads\Cabrini-master\Cabrini_Criptografia\Criptografia\obj\Debug\Criptografia.pdb
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Criptografia\bin\Debug\Criptografia.dll
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Criptografia\bin\Debug\Criptografia.pdb
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Criptografia\obj\Debug\Criptografia.dll
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Criptografia\obj\Debug\Criptografia.pdb
+C:\Users\032126421\Documents\GitHub\Cabrini\Cabrini_Criptografia\Criptografia\obj\Debug\Criptografia.csprojResolveAssemblyReference.cache
