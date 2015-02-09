@@ -36,6 +36,7 @@ namespace Cabrini_Criptografia
                 default:
                     break;
             }
+            txtDeCripto.Clear();
         }
 
         private void btnDecriptografar_Click(object sender, EventArgs e)
@@ -114,6 +115,8 @@ namespace Cabrini_Criptografia
             int chave;
             if (int.TryParse(txtChave.Text, out chave))
                 txtCripto.Text = cripto.Criptografa(txtDeCripto.Text, chave);
+            else
+                MessageBox.Show("Valor da chave invalido");
         }
 
         private void DeCriptoMonoAlfabetica()
@@ -122,12 +125,14 @@ namespace Cabrini_Criptografia
             int chave;
             if (int.TryParse(txtChave.Text, out chave))
                 txtDeCripto.Text = cripto.Decriptografa(txtCripto.Text, chave);
+            else
+                MessageBox.Show("Valor da chave invalido");
         }
 
         private void CriptoPoliAlfabetica()
         {
             var cripto = (IPoliAlfabetica)cbAlgoritmos.SelectedValue;
-            txtCripto.Text = cripto.Criptografa(txtCripto.Text, txtChave.Text);
+            txtCripto.Text = cripto.Criptografa(txtDeCripto.Text, txtChave.Text);
         }
 
         private void DeCriptoPoliAlfabetica()
