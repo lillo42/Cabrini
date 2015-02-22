@@ -17,6 +17,7 @@ namespace Criptografia.Assimetrica
             BigInteger z;
             ResolveNumerosParaDeCriptar(p, q,out d,out n, out z);            
             BigInteger e = DescobreNumeroResulta1(d, z);
+            mensage = TransformaMensaemEmTexto(mensage, n);
             return FazContaComMensagem(mensage,e,n);
         }
 
@@ -26,7 +27,8 @@ namespace Criptografia.Assimetrica
             BigInteger n;
             BigInteger d;
             ResolveNumerosParaDeCriptar(p, q, out d, out n);
-            return FazContaComMensagem(mensage, d,n);
+            mensage = FazContaComMensagem(mensage, d, n);
+            return TransformaTextoEmMensagem(mensage, n);
         }
 
         private string FazContaComMensagem(string mensagem, BigInteger multiplicador, BigInteger modulo )
@@ -59,15 +61,25 @@ namespace Criptografia.Assimetrica
 
         private string TransformaMensaemEmTexto(string mensagem, BigInteger tamanhoModulo)
         {
+            int tamanhoN = tamanhoModulo.ToString().Length;
             var textoNumero = new StringBuilder();
             for (int i = 0; i < mensagem.Length; i++)
-                textoNumero.Append((int)mensagem[i]);
-
-            int tamanhoN = tamanhoModulo.ToString().Length;
+                textoNumero.Append(((int)mensagem[i]).ToString("00"));
 
             int falta = textoNumero.Length % tamanhoN;
             for (int i = 0; i < falta; i++)
                 textoNumero.Append('0');
+            return textoNumero.ToString();
+        }
+
+        private string TransformaTextoEmMensagem(string mensagem, BigInteger tamanhoModulo)
+        {
+            int tamanhoN = tamanhoModulo.ToString().Length;
+
+            var textoNumero = new StringBuilder();
+            for (int i = 0; i < mensagem.Length; i+=2)
+                textoNumero.Append((char)Convert.ToInt32(mensagem.Substring(i, 2)));
+
             return textoNumero.ToString();
         }
 
