@@ -90,7 +90,7 @@ namespace Criptografia.Assimetrica
             else if (valor ==  2)
                 return true;
 
-            for (BigInteger i = 2; i * i <= valor; ++i)
+            for (BigInteger i = 2; BigInteger.Pow(i,2) <= valor; ++i)
             {
                 if (BigInteger.Remainder(valor,i) == 0)
                     return false;
@@ -101,19 +101,26 @@ namespace Criptografia.Assimetrica
 
         private BigInteger DescobreNumeroResulta1(BigInteger multiplicado, BigInteger modulo)
         {
-            var retorno = new BigInteger(1);
+            BigInteger retorno;
 
-            while (BigInteger.Remainder(BigInteger.Multiply(retorno, multiplicado), modulo) != 1)
-                retorno = BigInteger.Add(retorno, 1);
-            return retorno;
+            for (retorno = new BigInteger(1); BigInteger.Pow(retorno, 2) <= multiplicado; retorno = BigInteger.Add(retorno, 1))
+            {
+                if (BigInteger.Remainder(BigInteger.Multiply(retorno, multiplicado), modulo) == 1)
+                    return retorno;
+            }
+            throw new KeyNotFoundException("Valor da chaver não achada");
         }
 
         private BigInteger GetUmNaoDivivel(BigInteger numero)
         {
-            BigInteger retorno = new BigInteger(2);
-            while (BigInteger.GreatestCommonDivisor(numero, retorno) != 1)
-                retorno = BigInteger.Add(retorno, 1);
-            return retorno;
+            BigInteger retorno;
+
+            for (retorno = 2; BigInteger.Pow(retorno, 2) <= numero; retorno = BigInteger.Add(retorno,1))
+            {
+                if (BigInteger.GreatestCommonDivisor(numero, retorno) == 1)
+                    return retorno;
+            }
+            throw new KeyNotFoundException("Valor da chaver não achada");
         }
     }
 }
