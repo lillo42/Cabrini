@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Numerics" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -52,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Cifras\utVigenere.cs" />
     <Compile Include="Cifras\utCesar.cs" />
+    <Compile Include="Conceito\Matematica.cs" />
     <Compile Include="ITesteCriptografica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,6 +62,9 @@
       <Project>{0c785d52-50f5-4bec-9171-af59d65bb585}</Project>
       <Name>Criptografia</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assimetrica\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
