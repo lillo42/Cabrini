@@ -73,9 +73,9 @@ namespace Criptografia.Assimetrica
 
         private bool IsPrimo(BigInteger valor)
         {
-            if (valor == 1)
+            if (valor.IsOne)
                 return false;
-            else if (valor == 2)
+            else if (valor ==  2)
                 return true;
 
             for (BigInteger i = 2; i * i <= valor; ++i)
