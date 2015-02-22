@@ -103,7 +103,7 @@ namespace Criptografia.Assimetrica
         {
             BigInteger retorno;
 
-            for (retorno = new BigInteger(1); BigInteger.Pow(retorno, 2) <= multiplicado; retorno = BigInteger.Add(retorno, 1))
+            for (retorno = new BigInteger(1); BigInteger.Pow(retorno, 2) <= modulo; retorno = BigInteger.Add(retorno, 1))
             {
                 if (BigInteger.Remainder(BigInteger.Multiply(retorno, multiplicado), modulo) == 1)
                     return retorno;
