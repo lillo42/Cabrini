@@ -51,6 +51,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Assimetrica\utRSA.cs" />
     <Compile Include="Cifras\utVigenere.cs" />
     <Compile Include="Cifras\utCesar.cs" />
     <Compile Include="Conceito\Matematica.cs" />
@@ -63,9 +64,7 @@
       <Name>Criptografia</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assimetrica\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
